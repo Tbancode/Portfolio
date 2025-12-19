@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-black: #000000;
+  --primary-green: #00FF00;
+  --primary-green-dark: #00CC00;
+  --primary-green-light: #33FF33;
+}
+
+@layer base {
+  body {
+    /* @apply bg-black text-white overflow-x-hidden; */
+     @apply bg-black text-white;
+  }
+  
+  ::selection {
+    @apply bg-green-500 text-black;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #111827;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #00FF00;
+    border-radius: 5px;
+  }
+}
+
+@layer utilities {
+  /* Define your custom utilities here */
+  .gradient-text {
+    background: linear-gradient(to right, #00FF00, #33FF33);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-[1.02];
+  }
+  
+  .card-hover:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+  }
+  
+  .terminal-border {
+    @apply border-2 border-green-500 rounded-lg;
+  }
+  
+  .btn-primary {
+    @apply bg-green-500 text-black px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-green-600;
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8;
+    background: linear-gradient(to right, #00FF00, #33FF33);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+
+/* Add max-width and center all sections */
+section > div:first-child {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Ensure all direct children of main are centered */
+main > section {
+  @apply w-full;
+}
+
+main > section > div:first-child {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full;
+}
+
+/* Fix for Header */
+header > div:first-child {
+  @apply max-w-7xl mx-auto px-4 md:px-6 w-full;
+}
+
+/* Fix for Hero content */
+section#home > div:first-child:not([class*="absolute"]) {
+  @apply max-w-7xl mx-auto px-4 md:px-6 w-full;
+}
+
+/* Ensure all sections have proper spacing */
+section {
+  @apply w-full;
+}
+
+section > div:first-child:not([class*="absolute"]) {
+  @apply max-w-7xl mx-auto px-4 md:px-6 w-full;
+}
