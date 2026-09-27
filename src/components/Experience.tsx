@@ -36,7 +36,7 @@ const Experience = () => {
         {
       title: 'Financial Systems analyst',
       company: 'Rainbow Hide & Skin',
-      period: 'Ongoing',
+      period: 'June 2025 - Ongoing',
       description: [
        'Analyzing financial and business processes',
        'Reviewing and testing financial systems, documenting functional and technical requirements', 
