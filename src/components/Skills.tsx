@@ -50,6 +50,11 @@ const Skills = () => {
       category: 'Media',
       skills: ['Cinematography', 'Video Editing (Premier Pro)'],
     },
+        {
+      icon: <FiDatabase />,
+      category: 'Data Analysis',
+      skills: ['Quickbook', 'Excel'],
+    }
   ]
 
   return (

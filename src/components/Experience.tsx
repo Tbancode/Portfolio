@@ -17,7 +17,7 @@ const Experience = () => {
     {
       title: 'Project Manager',
       company: 'NPA (Internship)',
-      period: '6 Months',
+      period: 'April 2024 - September 2024',
       description: [
         'Managed mobile app development project',
         'Coordinated between development teams and stakeholders',
@@ -31,6 +31,16 @@ const Experience = () => {
         'Built responsive websites using HTML, CSS, and ReactJS',
         'Implemented troubleshooting and debugging processes',
         'Contributed to planning and execution of web projects',
+      ],
+    },
+        {
+      title: 'Financial Systems analyst',
+      company: 'Rainbow Hide & Skin',
+      period: 'Ongoing',
+      description: [
+       'Analyzing financial and business processes',
+       'Reviewing and testing financial systems, documenting functional and technical requirements', 
+       'Working with cross-functional teams to integrate technology to improve the efficiency of operations and reporting financial data',
       ],
     },
   ]
